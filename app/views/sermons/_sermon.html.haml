@@ -1,5 +1,5 @@
 .sermon
   .title= sermon.title
   .sermon-content
-    .download= link_to 'Bajar Audio', sermon.audio.url
+    .download= link_to 'Bajar Audio', sermon.audio.url, data: { no_turbolink: true }
     .date= pretty_date sermon.date
