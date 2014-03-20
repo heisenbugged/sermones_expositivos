@@ -1,0 +1,9 @@
+%h2.title
+  %hr.small
+  Todos Nuestros Sermones
+  %hr.large
+
+.sermons= render @sermons
+.clr
+
+= paginate @sermons

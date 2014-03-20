@@ -1,0 +1,8 @@
+- content_for :motto do
+  .bg
+  .motto
+    %h1 Vayan por todo el mundo <br /> y anuncien las buenas nuevas <br /> a toda criatura.
+    = link_to sermons_path, class: 'button' do
+      %button.white Ver Todos Nuestros Sermones
+
+= render template: "layouts/application"
