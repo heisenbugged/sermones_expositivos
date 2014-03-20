@@ -104,7 +104,7 @@ hr.large {
 }
 
 .bg, {
-  background: transparent image-url(main-bg.jpg) 50% 0%;
+  background: transparent asset_url('main-bg.jpg') 50% 0%;
   background-size: cover;
   height: 555px;
   width: 100%;
@@ -114,7 +114,7 @@ hr.large {
 }
 
 .bg.sermons {
-  background: transparent image-url(sermons-bg.jpg) 50% 0%;
+  background: transparent asset_url('sermons-bg.jpg') 50% 0%;
   height: 500px;
 }
 
