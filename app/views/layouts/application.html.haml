@@ -17,7 +17,7 @@
   .wrapper
     %header
       .content
-        %nav
+        %nav.main
           - if user_signed_in?
             = link_to 'upload a new sermon', new_sermon_path
             = link_to 'sign out', destroy_user_session_path, method: :delete
@@ -35,4 +35,4 @@
     .push
 
   %footer
-    .content Construida Y Mantenida Por Iglesia Su Nombre
+    .content Construida Y Mantenida Por Sermones Expositivos
