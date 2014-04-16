@@ -3,7 +3,7 @@
   = f.input :author
   = f.input :date, as: :string
   = f.input :category
-  = f.input :audio, as: :file
+  = f.input :audio, as: :file, required: false
   = f.hidden_field :audio_cache
   = f.submit
 
