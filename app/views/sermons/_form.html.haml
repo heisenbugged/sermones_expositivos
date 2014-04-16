@@ -1,0 +1,11 @@
+= simple_form_for @sermon, html: {multipart: true} do |f|
+  = f.input :title
+  = f.input :author
+  = f.input :date, as: :string
+  = f.input :category
+  = f.input :audio, as: :file
+  = f.hidden_field :audio_cache
+  = f.submit
+
+:javascript
+  $("#sermon_date").minical();

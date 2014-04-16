@@ -3,3 +3,6 @@
   .sermon-content
     .download= link_to 'Bajar Audio', sermon.audio.url, data: { no_turbolink: true }
     .date= pretty_date sermon.date
+
+  - if current_user
+    .edit= link_to 'edit', edit_sermon_path(sermon)

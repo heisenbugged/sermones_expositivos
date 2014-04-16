@@ -9,6 +9,7 @@ class SermonsController < ApplicationController
       @categories = Sermon.unscoped.group('category')
                           .select('category, COUNT(id) as sermons_count')
                           .where('category IS NOT NULL')
+                          .order('category asc')
     end
 
   end
@@ -17,6 +18,19 @@ class SermonsController < ApplicationController
     @sermon = Sermon.new
     render layout: 'application'
   end
+
+  def edit
+    @sermon = Sermon.find params[:id]
+    render layout: 'application'
+  end
+
+  def update
+    @sermon = Sermon.find params[:id]
+    flash[:notice] = "Sermon saved successfully" if @sermon.update_attributes(sermon_params)
+    respond_with(@sermon, location: sermons_path)
+  end
+
+
 
   def create
     @sermon = Sermon.new sermon_params
@@ -27,7 +41,7 @@ class SermonsController < ApplicationController
   private
 
   def sermon_params
-    params[:sermon].permit(:title, :author, :audio, :date)
+    params[:sermon].permit(:title, :author, :audio, :date, :category)
   end
 
 end

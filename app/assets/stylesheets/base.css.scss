@@ -284,7 +284,7 @@ nav.main {
 
 
 .category {
-  padding: 25px;
+  padding: 7px;
   color: #4B7200;
   /*background-color: rgba(103, 125, 61, 0.78);*/
   border: 1px solid rgba(103, 125, 61, 0.78);
@@ -292,7 +292,7 @@ nav.main {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  margin: 25px 0px;
+  margin: 10px 0px;
 }
 
 .category:hover {
@@ -306,4 +306,11 @@ nav.main {
 .sermons-count {
   color: black;
   font-weight: normal;
+}
+
+.edit {
+  margin: 10px 0px;
+}
+.edit a {
+  color: #4B7200;
 }
