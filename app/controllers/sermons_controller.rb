@@ -5,11 +5,14 @@ class SermonsController < ApplicationController
   def index
     if params[:category]
       @sermons = Sermon.where(category: params[:category]).page(params[:page] || 1).per(12)
+      render layout: 'home'
     else
+      @black_logo = true
       @categories = Sermon.unscoped.group('category')
                           .select('category, COUNT(id) as sermons_count')
                           .where('category IS NOT NULL')
                           .order('category asc')
+      render layout: 'sermons'
     end
 
   end

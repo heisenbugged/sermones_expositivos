@@ -17,6 +17,10 @@ header {
   padding: 20px 0px;
 }
 
+header.nobg {
+  background: transparent;
+}
+
 
 h1, h2, h3, h4 {
   font-family: $title-font;
@@ -119,10 +123,10 @@ hr.large {
 
 .bg.sermons {
   background: transparent asset_url('sermons-bg.jpg') 50% 0%;
-  height: 550px;
+  height: 705px;
 }
 
-.motto.sermons {margin-bottom: 475px; }
+.motto.sermons { margin-bottom: 592px; }
 
 .content {
   width: 960px;
@@ -135,6 +139,12 @@ hr.large {
 .logo {
   color: white;
   font-size: 25px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, .15);
+}
+
+.logo.black {
+  color: black;
+  text-shadow: none;
 }
 
 .logo-content {
@@ -273,7 +283,6 @@ nav.main {
     margin-left: 25px;
   }
 }
-
 
 .notice {
   background: white;
