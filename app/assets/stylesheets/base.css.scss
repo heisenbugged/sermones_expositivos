@@ -22,6 +22,10 @@ h1, h2, h3, h4 {
   font-family: $title-font;
 }
 
+h1 .verse {
+  font-size: 40px;
+}
+
 h2 {
   font-size: 36px;
   font-weight: 300;
@@ -115,10 +119,10 @@ hr.large {
 
 .bg.sermons {
   background: transparent asset_url('sermons-bg.jpg') 50% 0%;
-  height: 500px;
+  height: 550px;
 }
 
-.motto.sermons { margin-bottom: 125px; }
+.motto.sermons {margin-bottom: 475px; }
 
 .content {
   width: 960px;
@@ -138,7 +142,7 @@ hr.large {
 }
 
 .motto {
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 80px;
   color: white;
   text-align: center;
@@ -276,4 +280,30 @@ nav.main {
   text-align: center;
   padding: 10px 0px;
   color: rgba(0, 0, 0, .7)
+}
+
+
+.category {
+  padding: 25px;
+  color: #4B7200;
+  /*background-color: rgba(103, 125, 61, 0.78);*/
+  border: 1px solid rgba(103, 125, 61, 0.78);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 25px 0px;
+}
+
+.category:hover {
+  border: 1px solid rgba(103, 125, 61, 0.78);
+  background-color: rgba(103, 125, 61, 0.78);
+  color: white;
+  -webkit-transition: 0.25s; /* For Safari 3.1 to 6.0 */
+  transition: 0.25s;
+}
+
+.sermons-count {
+  color: black;
+  font-weight: normal;
 }

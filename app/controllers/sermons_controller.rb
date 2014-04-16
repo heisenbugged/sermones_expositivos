@@ -3,7 +3,14 @@ class SermonsController < ApplicationController
   respond_to :html
 
   def index
-    @sermons = Sermon.page(params[:page] || 1).per(12)
+    if params[:category]
+      @sermons = Sermon.where(category: params[:category]).page(params[:page] || 1).per(12)
+    else
+      @categories = Sermon.unscoped.group('category')
+                          .select('category, COUNT(id) as sermons_count')
+                          .where('category IS NOT NULL')
+    end
+
   end
 
   def new

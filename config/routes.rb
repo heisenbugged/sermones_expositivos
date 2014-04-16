@@ -1,7 +1,7 @@
 SermonesExpositivos::Application.routes.draw do
 
   devise_for :users
-  root "home#index"
+  root "sermons#index"
   resources :sermons
 
   # The priority is based upon order of creation: first created -> highest priority.

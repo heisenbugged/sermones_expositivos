@@ -1,9 +1,33 @@
+- if @sermons
+  - content_for :motto do
+    .bg
+    .motto
+      %h1
+        Entre tanto que voy, <br /> ocúpate en la lectura, <br /> la exhortación y la enseñanza. <br />
+        %span.verse 1 Timoteo 4:13
+      = link_to sermons_path, class: 'button' do
+        %button.white Ver Todos Nuestros Categorias
+
+- if @categories
+  - content_for :motto do
+    .bg.sermons
+    .motto.sermons
+
+
 %h2.title
   %hr.small
-  Todos Nuestros Sermones
+  - if @categories
+    Los Estudios
+
+  - if @sermons
+    Los Estudios de #{params[:category]}
+
   %hr.large
 
-.sermons= render @sermons
-.clr
+- if @categories
+  .sermons= render partial: 'category', collection: @categories, as: :category
+- elsif @sermons
+  .sermons= render @sermons
+  = paginate @sermons
 
-= paginate @sermons
+.clr
